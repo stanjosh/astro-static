@@ -4,14 +4,55 @@ export const partial = true;
 ---
 
 <header>
-    Header
+    <div class="logo">
+        logo
+    </div>
+
+    <h1>Header</h1>
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="{{ '/about' | url }}">About</a></li>
+                <li><a href="{{ '/contact' | url }}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <style>
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+        font-size: larger;
+    }
+
+    ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+        
+    }
+
+    .logo {
+        font-size: 1.5em;
+        border: 2px solid #333;
+        padding: 25px;
+    }
+
     header {
+        
+        display: flex;
+        justify-content: space-between;
         background-color: #f4f4f4;
         color: #333;
-        padding: 10px 0;
+        padding: 15px;
         text-align: center;
+        align-items: center;
+        font-size: 1rem;
     }
 </style>

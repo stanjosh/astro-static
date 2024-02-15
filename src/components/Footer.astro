@@ -1,12 +1,48 @@
 ---
 
+const contacts = [
+  {
+    name: "email",
+    url: "",
+    image: "/images/socials/email.svg",
+  },
+  {
+    name: "linkedin",
+    url: "",
+    image: "/images/socials/linkedin.svg",
+  },
+  {
+    name: "facebook",
+    url: "",
+    image: "/images/socials/facebook.svg",
+  },
+  {
+    name: "instagram",
+    url: "",
+    image: "/images/socials/insta.svg",
+  },
+
+];
+
+
+
 export const partial = true;
 
 ---
 
 
 <footer>
-    foot
+    <div class="socials">
+        {contacts.map((item) => (
+            <a href={item.url} class="social">
+            <div style={`background-image: url(${item.image})`}>
+            
+            </div>
+            </a> 
+    
+            ))}
+        </div>
+    <div>
 </footer>
 
 <style>
@@ -14,9 +50,43 @@ export const partial = true;
         background: #f0f0f0;
         padding: 20px;
         text-align: center;
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
         
+    }
+
+    .socials {
+
+        flex: 1;
+        display: flex;
+        justify-content: end;
+    }
+
+    .social div {
+        
+        min-height: 48px;
+        min-width: 48px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        margin: 1cqw;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .social div:hover {
+        transform: scale(1.2);
+
+    }
+
+    .socials {
+        display: flex;
+        flex-wrap: wrap;
+
+        max-height: min-content;
+
+        align-items: center;
     }
 </style>
