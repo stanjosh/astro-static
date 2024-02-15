@@ -3,44 +3,34 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MainContent from '../partials/MainContent.astro';
+import ContentBlock from '../partials/ContentBlock.astro';
+
+
+
 
 ---
 
 <Layout>
-	<Header />
-	<main>
-		<MainContent>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae commodi sapiente cupiditate repellendus voluptates maiores!
-		</MainContent>
-		<MainContent>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum rerum saepe at eveniet provident possimus voluptatibus quaerat non laboriosam eos esse magnam eaque et excepturi velit reiciendis dolorum debitis ad ex porro, dolores quis veniam tempore. Deleniti eligendi eius natus cum cumque sit illo laborum rem exercitationem quidem, accusamus facere? Possimus corporis totam iusto quam voluptate saepe hic sit?
-		</MainContent>
-		<MainContent>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit, eum molestiae deserunt sed nihil? Incidunt, blanditiis adipisci non rem obcaecati nulla ratione provident, quod aliquam molestiae quis?
-		</MainContent>
-	</main>
+	<Header title="Company Inc."/>
+	<MainContent>
+		<ContentBlock>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem blanditiis nobis, cumque, dicta pariatur tempore est maiores quos fuga sint nesciunt nemo distinctio nisi ratione officiis facilis! Nesciunt laborum sequi similique, fugiat ipsa est sit aperiam assumenda expedita necessitatibus.
+		</ContentBlock>
 
-	<Footer />
+		<ContentBlock>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, cum enim unde reprehenderit nemo impedit laboriosam qui sint maxime nesciunt?
+		</ContentBlock>
+
+		<ContentBlock>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rem blanditiis nobis, cumque, dicta pariatur tempore est maiores quos fuga sint nesciunt nemo distinctio nisi ratione officiis facilis! Nesciunt laborum sequi similique, fugiat ipsa est sit aperiam assumenda expedita necessitatibus.
+		</ContentBlock>
+
+		<ContentBlock>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex velit accusamus nulla, consequuntur optio quo odio, corporis repellendus itaque enim aut saepe, maxime dolorum magnam totam suscipit cum facilis cumque architecto inventore aperiam atque qui!
+		</ContentBlock>
+
+	</MainContent>
+	<Footer title="Company Inc."/>
 </Layout>
 
-<style>
-	canvas {
-		position: fixed;
-		top: 0;
-		left: 0;
-	}
-	main {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 2rem;
-		margin: auto;
-		padding: 1rem;
-		width: 100%;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-</style>
+

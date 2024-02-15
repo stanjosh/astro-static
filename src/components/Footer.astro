@@ -25,14 +25,16 @@ const contacts = [
 ];
 
 
-
+const { title } = Astro.props
 export const partial = true;
 
 ---
 
 
 <footer>
+    { title }
     <div class="socials">
+        
         {contacts.map((item) => (
             <a href={item.url} class="social">
             <div style={`background-image: url(${item.image})`}>
@@ -47,10 +49,12 @@ export const partial = true;
 
 <style>
     footer {
+        display: flex;
+        align-items: center;
         background: #f0f0f0;
-        padding: 20px;
+        padding: 0 20px;
         text-align: center;
-        position: relative;
+        position: sticky;
         bottom: 0;
         width: 100%;
         
@@ -65,8 +69,8 @@ export const partial = true;
 
     .social div {
         
-        min-height: 48px;
-        min-width: 48px;
+        min-height: 32px;
+        min-width: 32px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

@@ -4,33 +4,25 @@ export const partial = true;
 
 ---
 
-<div>
-    <p>
-        <slot />
-    </p>
-</div>
+<main>
 
+        <slot />
+
+</main>
 
 <style>
-    div {
-        display: flex;
-        flex-direction: column;
-        flex: 1 0 auto;
-        max-width: 400px;
-        padding: 1em;
-        border: 1px solid #336;
-        border-radius: 3px;
-        margin-bottom: 1em;
-        background-color: #356;
-    }
-    p {
-        margin: 0;
-
-    }
-
-    p::before {
-        content: " ";
-        margin-right: 0.5em;
-    }
-
+	main {
+        font-family: 'Fredoka', sans-serif;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		margin: auto;
+		padding: 1rem;
+		width: 100%;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
 </style>
