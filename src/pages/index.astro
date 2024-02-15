@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Three from '../partials/Three.astro'
+---
+
+<Layout>
+	<Header />
+	<main>
+		<Three />
+	</main>
+	<script type="module" src="/main.js"></script>
+	<Footer />
+</Layout>
+
+<style>
+	canvas {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+</style>
